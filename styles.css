@@ -1,39 +1,98 @@
+/* General styles */
 body {
-  background-color: lightblue;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
 }
 
-h1 {
-  color: darkblue;
-  text-align: center;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+/* Container layout */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* responsive wrapping */
+  justify-content: center;
+  gap: 20px;
 }
 
-.square {
-  width: 50%;           
-  aspect-ratio: 1 / 1; 
-  background-color: rgb(191, 144, 238);
+/* Box styling */
+.box {
+  background: white;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
- .layout {
-      width: 80%;
-      margin: 0 auto;
-    }
+/* Logo box */
+.logo-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-    /* Top long rectangle */
-    .top-box {
-      border: 2px solid black;
-      height: 100px;
-      margin-bottom: 10px;
-    }
+/* Biodata list */
+.biodata-box ul {
+  list-style: none;
+  padding: 0;
+}
 
-    /* Row of three boxes */
-    .row {
-      display: flex;
-      gap: 10px; /* space between boxes */
-    }
+.biodata-box li {
+  margin: 8px 0;
+  font-size: 16px;
+}
 
-    .row .box {
-      flex: 1; /* equal width for all three */
-      border: 2px solid black;
-      height: 150px;
-    }
+/* Hyperlink hover effect */
+.nota-box a {
+  text-decoration: underline;
+  color: #007BFF;
+}
+
+.nota-box a:hover {
+  text-decoration: overline; /* underline becomes overline */
+  color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+  }
+}
+
+.overlap-box {
+  position: relative;   /* allows overlap positioning */
+  width: 200px;         /* box size */
+  height: 200px;
+  border: 2px solid #333;
+}
+
+/* First image (base) */
+.img1 {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Second image (overlap) */
+.img2 {
+  width: 80px;
+  position: absolute;
+  top: 20px;   /* adjust vertical position */
+  left: 60px;  /* adjust horizontal position */
+}
+
+
+
+
